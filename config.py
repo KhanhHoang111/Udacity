@@ -5,9 +5,9 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'sqludaicty.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or '[sqludaicty]'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or '[azureuser]'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or '[Kkhanhss#154]'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'sqludaicty'
+    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'azureuser'
+    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Kkhanhss#154'
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
